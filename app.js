@@ -27,6 +27,9 @@ var callback = '?callback=getInfo';
 var head = document.getElementsByTagName("script")[0];
 var htmlElement = document.getElementById("theTable");
 
+var loading =
+document.getElementById("loading");
+
 
 
 // Global object and table titles
@@ -64,7 +67,7 @@ function getUsers(users) {
                 global.push({name: '<span class="inactive-user">' + user + '</span>',
                              logo: "",
                              live: "",
-                             status: '<span class="inactive-account">Inactive Account</span>'})
+                             status: '<span class="inactive-account">Inactive Account</span>'});
             }
         };
         xhr.onerror = function() {
@@ -75,7 +78,7 @@ function getUsers(users) {
     });
 
 
-};
+}
 
 
 function appendInfo(data, user) {
@@ -130,7 +133,8 @@ setInterval(function(){
 
 var tableBuilder = function(json, parameters, id) {
 
-    id.innerHTML = "";
+
+    id.innerHTML = "", loading.innerHTML = "";
 
     var table = document.createElement("table");
 
@@ -170,14 +174,14 @@ var tableBuilder = function(json, parameters, id) {
 
         table.appendChild(row);
 
-    };
+    }
 
     // Append to HTML Element
 
     id.appendChild(table);
 
 
-}
+};
 
 getUsers(channels);
 
@@ -222,7 +226,7 @@ for (var i = 0; i < buttons.length; i++) {
 
 
             }
-        }
+        };
 
 
    })(that));
