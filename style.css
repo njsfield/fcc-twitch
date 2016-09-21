@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font-family: monospace;
+}
+
+table {
+
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 800px;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+body {
+    text-align: center;
+}
+
+
+/* attribute selectors */
+
+tr:nth-child(1) td:nth-child(1) {
+    border: none;
+}
+
+td:nth-child(1), td:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}
+
+tr:nth-child(1) {
+
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td:last-child {
+
+    max-width: 250px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+td {
+    width: 40%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid white;
+    margin: 5px;
+}
+
+
+
+/**** online/offline/inactive ****/
+
+
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}
+
+.inactive-user {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.inactive-account {
+    color: grey;
+}
+
+.live {
+    color: blue;
+}
+
+
+/*** buttons ***/
+
+#button-container {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    width: 100px;
+    height: 60px;
+    margin: 20px 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.btn-active {
+    color: black;
+    background: white;
+}
